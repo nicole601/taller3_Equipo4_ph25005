@@ -6,10 +6,15 @@ Este proyecto automatiza la evaluación y selección de cotizaciones de proveedo
 - *Plazo de Entrega*: 25% (ranking inverso: menor tiempo de entrega obtiene mayor puntaje).
 - *Condiciones de Pago*: 15% (ranking directo: mejores condiciones obtienen mayor puntaje).
 
+## Nuevas Funcionalidades y Automatización Avanzada
+Además del núcleo de evaluación, el sistema incorpora características profesionales para la entrega institucional:
+- **Generación Automática de Reportes en PDF:** Utilizando `ReportLab`, el script genera reportes individuales en formato PDF para el Top de proveedores evaluados, guardándolos de forma estructurada en la ruta `output/pdfs/`.
+- **Simulación de Notificación por SMTP:** Incorpora un módulo automatizado que simula el envío de correos electrónicos a los proveedores recomendados, adjuntando sus respectivos reportes de cotización de manera limpia y eficiente.
+
 ## Estructura del Repositorio
 - data/raw/: Contiene el archivo Excel original con las cotizaciones de entrada.
-- output/: Contiene el archivo Excel resultante con los puntajes calculados y el mejor proveedor seleccionado.
-- src/: Contiene el script principal de Python (comparador.py).
+- output/: Contiene el archivo Excel resultante con los puntajes calculados, además de la subcarpeta `pdfs/` con los reportes individuales del Top de proveedores.
+- src/: Contiene el script principal de Python (`comparador.py`).
 - docs/: Documentación del proyecto (README.md y bitacora_prompts.md).
 - requirements.txt: Lista de dependencias y librerías necesarias.
 
